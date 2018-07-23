@@ -1,0 +1,16 @@
+version:"3"
+services:
+  mysql:
+    container_name:mysql
+    image:registry.saas.hand-china.com/tools/mysql:5.6
+    ports:
+    -  "3306:3306"
+    env:
+    - "USER_NAME":root
+    - "MYSQL_ROOT_PASS":"1234567"
+    - "MYSQL_IP":192.168.99.100
+  java:
+    container_name:java
+    image:registry.saas.hand-china.com/hap-cloud/base:latest
+
+
